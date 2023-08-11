@@ -12,6 +12,7 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
 
     public JuegoAhorcadoFijo(String palabra){
         palabraSecreta = palabra;
+        palabraActual = "_".repeat(palabraSecreta.length());
     }
  
   
@@ -23,17 +24,26 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
 
     @Override
     void actualizarPalabraActual(char letra) {
-   
+        for(int i = 0; i<palabraActual.length()-1; i++){
+            if(palabraActual.charAt(i)==letra){
+                palabraActual.replace(palabraActual.charAt(i), letra);
+            }
+        }
     }
 
     @Override
-    boolean verificarLetra() {
+    boolean verificarLetra(char letra) {
         for(int i = 0; i<palabraActual.length()-1; i++){
             if (palabraActual.charAt(i)==letra){
                 return true;
             }
         }
         return false;
+    }
+
+    @Override
+    public void inicializarPalabraSecreta() {
+        
     }
     
 }

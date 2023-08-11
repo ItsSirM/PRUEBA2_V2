@@ -14,9 +14,8 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado{
     String palabraActual;
     int intentos;
     
-    
     abstract void actualizarPalabraActual(char letra);
-    abstract boolean verificarLetra();
+    abstract boolean verificarLetra(char letra);
     abstract boolean hasGanado();
     
     
@@ -25,8 +24,5 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado{
         
     }
     
-    @Override
-    public void inicializarPalabraSecreta(){
-        
-    }
+   
 }
