@@ -16,6 +16,7 @@ public class Menu extends javax.swing.JFrame {
     public Menu() {
         initComponents();
     }
+    JuegoAhorcadoAzar azar = new JuegoAhorcadoAzar();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,6 +48,11 @@ public class Menu extends javax.swing.JFrame {
 
         AZARB.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         AZARB.setText("Ahorcado Azar");
+        AZARB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AZARBActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton3.setText("Salir");
@@ -123,8 +129,13 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_FIJOBActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        azar.jugar();
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void AZARBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AZARBActionPerformed
+        
+    }//GEN-LAST:event_AZARBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
