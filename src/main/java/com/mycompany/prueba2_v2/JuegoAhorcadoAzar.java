@@ -3,25 +3,25 @@ package com.mycompany.prueba2_v2;
 
 
 import java.util.Random;
+import java.util.ArrayList;
 public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     private Random rng = new Random();
     
-     public String palabras[] = {
-        "computadora", 
-        "programacion", 
-        "java", 
-        "desarrollo", 
-        "aplicacion", 
-        "ahorcado", 
-        "palabra", 
-        "azar", 
-        "proyecto", 
-        "tecnologia"
-    };
+    public ArrayList<String> palabras;
+    
+    public JuegoAhorcadoAzar(){
+        palabras.add("gaviota");
+        palabras.add("eiffel");
+        palabras.add("torre");
+        palabras.add("ciudad");
+        palabras.add("ciudad");
+        palabras.add("erick");
+    }
+    
      
     public void inicializarPalabraSecreta(){
         int index = rng.nextInt(0, 10);
-        palabraSecreta = palabras[index];
+        palabraSecreta = palabras.get(index);
     }
     
     public String  actualizarPalabraActual(char letra){

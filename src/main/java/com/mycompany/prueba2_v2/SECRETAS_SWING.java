@@ -11,19 +11,9 @@ import javax.swing.JOptionPane;
  * @author MARTI
  */
 public class SECRETAS_SWING extends javax.swing.JFrame {
-private String palabrasAlAzar[] = {
-        "computadora", 
-        "programacion", 
-        "java", 
-        "desarrollo", 
-        "aplicacion", 
-        "ahorcado", 
-        "palabra", 
-        "azar", 
-        "proyecto", 
-        "tecnologia"
-        
-    };
+
+    JuegoAhorcadoAzar azar = new JuegoAhorcadoAzar();
+    
     /**
      * Creates new form SECRETAS_SWING
      */
@@ -141,10 +131,7 @@ private String palabrasAlAzar[] = {
        
         String nuevaPalabra = jTextField1.getText().trim();
     if (!nuevaPalabra.isEmpty()) {
-        String nuevasPalabrasAlAzar[] = new String[palabrasAlAzar.length + 1];
-        System.arraycopy(palabrasAlAzar, 0, nuevasPalabrasAlAzar, 0, palabrasAlAzar.length);
-        nuevasPalabrasAlAzar[nuevasPalabrasAlAzar.length - 1] = nuevaPalabra;
-        palabrasAlAzar = nuevasPalabrasAlAzar;
+        azar.palabras.add(nuevaPalabra);
         jTextField1.setText(""); 
         
         actualizarTextArea(); 
@@ -161,7 +148,8 @@ private String palabrasAlAzar[] = {
 
     private void actualizarTextArea() {
     StringBuilder texto = new StringBuilder();
-    for (String palabra : palabrasAlAzar) {
+    
+    for (String palabra : azar.palabras) {
         texto.append(palabra).append("\n");
     }
     jTextArea1.setText(texto.toString());
