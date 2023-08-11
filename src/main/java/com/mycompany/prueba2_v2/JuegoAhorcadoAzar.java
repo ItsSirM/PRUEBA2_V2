@@ -27,7 +27,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     public String  actualizarPalabraActual(char letra){
         for(int i = 0; i<palabraActual.length()-1; i++){
             if(palabraActual.charAt(i)==letra){
-                palabraActual.replace(palabraActual.charAt(i), letra);
+                palabraActual = palabraActual.replace(palabraActual.charAt(i), letra);
             }
         }
         return palabraActual;
