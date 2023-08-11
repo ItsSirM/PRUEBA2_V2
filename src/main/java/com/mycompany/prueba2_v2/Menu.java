@@ -113,7 +113,13 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void FIJOBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FIJOBActionPerformed
-        // TODO add your handling code here:
+       this.dispose();
+       
+       FIJO_SWING FFF= new FIJO_SWING();
+       
+       FFF.setVisible(true);
+       FFF.setLocationRelativeTo(null);
+       
     }//GEN-LAST:event_FIJOBActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
