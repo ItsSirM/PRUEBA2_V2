@@ -4,16 +4,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     private Random rng = new Random();
     
     private String palabras[] = new String[10];
-    palabras[0] = "gaviota";
-    palabras[1] = "azotea";
-    palabras[2] = "espacio";
-    palabras[3] = "grano";
-    palabras[4] = "seguridad";
-    palabras[5] = "base";
-    palabras[6] = "aceitar";
-    palabras[7] = "trepar";
-    palabras[8] = "polilla";
-    palabras[9] = "adulto";
+
     
     public void inicializarPalabraSecreta(){
         int index = rng.nextInt(0, 10);

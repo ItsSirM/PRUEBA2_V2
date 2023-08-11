@@ -134,7 +134,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void AZARBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AZARBActionPerformed
-        
+        azar.jugar();
+        this.dispose();
     }//GEN-LAST:event_AZARBActionPerformed
 
 
