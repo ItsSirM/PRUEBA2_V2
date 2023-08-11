@@ -1,10 +1,24 @@
 package com.mycompany.prueba2_v2;
+
+
+
 import java.util.Random;
 public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     private Random rng = new Random();
     
-    private String palabras[] = new String[10];
-    
+     private String palabras[] = {
+        "computadora", 
+        "programacion", 
+        "java", 
+        "desarrollo", 
+        "aplicacion", 
+        "ahorcado", 
+        "palabra", 
+        "azar", 
+        "proyecto", 
+        "tecnologia"
+    };
+     
     public void inicializarPalabraSecreta(){
         int index = rng.nextInt(0, 10);
         palabraSecreta = palabras[index];
