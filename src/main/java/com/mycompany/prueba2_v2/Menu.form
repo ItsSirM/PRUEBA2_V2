@@ -135,6 +135,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Palabras Secretas"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SECRETBActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

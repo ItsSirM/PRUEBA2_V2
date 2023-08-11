@@ -69,6 +69,11 @@ public class Menu extends javax.swing.JFrame {
 
         SECRETB.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         SECRETB.setText("Palabras Secretas");
+        SECRETB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SECRETBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -137,6 +142,15 @@ public class Menu extends javax.swing.JFrame {
         azar.jugar();
         this.dispose();
     }//GEN-LAST:event_AZARBActionPerformed
+
+    private void SECRETBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SECRETBActionPerformed
+       this.dispose();
+       
+       SECRETAS_SWING LLL=new SECRETAS_SWING();
+       LLL.setVisible(true);
+       LLL.setLocationRelativeTo(null);
+       
+    }//GEN-LAST:event_SECRETBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

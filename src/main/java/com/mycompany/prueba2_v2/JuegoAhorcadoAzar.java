@@ -6,7 +6,7 @@ import java.util.Random;
 public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     private Random rng = new Random();
     
-     private String palabras[] = {
+     public String palabras[] = {
         "computadora", 
         "programacion", 
         "java", 
