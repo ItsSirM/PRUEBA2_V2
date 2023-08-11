@@ -48,9 +48,6 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
     @Override
     public void jugar() {
         inicializarPalabraSecreta();
-        FIJO_AZAR azar = new FIJO_AZAR();
-        azar.setVisible(true);
-        azar.setLocationRelativeTo(null);
     }
     
     public void reset(){
