@@ -16,26 +16,32 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
     }
 
     @Override
-    void actualizarPalabraActual(char letra) {
+    String actualizarPalabraActual(char letra) {
         for(int i = 0; i<palabraActual.length()-1; i++){
             if(palabraActual.charAt(i)==letra){
-                palabraActual.replace(palabraActual.charAt(i), letra);
+                palabraActual = palabraActual.replace(palabraActual.charAt(i), letra);
+                System.out.println(palabraActual);
             }
         }   
+        return palabraActual;
     }
 
     @Override
     boolean verificarLetra(char letra) {
-        for(int i = 0; i<palabraActual.length()-1; i++){
-            if (palabraActual.charAt(i)==letra)
-                return true;
+        int c=0;
+        for(int i = 0; i<palabraSecreta.length()-1; i++){
+            if (palabraSecreta.charAt(i)==letra)
+                c++;
         }
+        
+        if (c>0)
+            return true;
         return false;
     }
 
     @Override
     public void inicializarPalabraSecreta() {
-        palabraSecreta = palabraActual;
+        
     }
 
     @Override
@@ -46,5 +52,8 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
         azar.setLocationRelativeTo(null);
     }
     
+    public void reset(){
+        palabraActual = "_".repeat(palabraSecreta.length());
+    }
    
 }
