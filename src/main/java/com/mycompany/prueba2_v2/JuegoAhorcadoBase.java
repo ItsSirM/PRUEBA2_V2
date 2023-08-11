@@ -12,7 +12,7 @@ public abstract class JuegoAhorcadoBase implements JuegoAhorcado{
     
     String palabraSecreta;
     String palabraActual;
-    int intentos;
+    int intentos = 5;
     
     abstract void actualizarPalabraActual(char letra);
     abstract boolean verificarLetra(char letra);
