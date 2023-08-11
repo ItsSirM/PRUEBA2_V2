@@ -119,18 +119,18 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void FIJOBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FIJOBActionPerformed
-       this.dispose();
+        FIJO_SWING FFF= new FIJO_SWING();
        
-       FIJO_SWING FFF= new FIJO_SWING();
+        FFF.setVisible(true);
+        
+        this.dispose();
        
-       FFF.setVisible(true);
-       FFF.setLocationRelativeTo(null);
+      
        
     }//GEN-LAST:event_FIJOBActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        azar.jugar();
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void AZARBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AZARBActionPerformed
