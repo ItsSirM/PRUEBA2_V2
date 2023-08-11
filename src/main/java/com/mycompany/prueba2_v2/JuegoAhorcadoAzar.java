@@ -10,6 +10,8 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     public ArrayList<String> palabras;
     
     public JuegoAhorcadoAzar(){
+        palabras = new ArrayList();
+        
         palabras.add("gaviota");
         palabras.add("eiffel");
         palabras.add("torre");

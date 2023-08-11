@@ -147,7 +147,10 @@ public class SECRETAS_SWING extends javax.swing.JFrame {
     }//GEN-LAST:event_AGREGARBActionPerformed
 
     private void actualizarTextArea() {
-    StringBuilder texto = new StringBuilder();
+        JOptionPane.showMessageDialog(this,"Debe agregar una palabra para que se muestren las demas");
+         StringBuilder texto = new StringBuilder();
+        jTextArea1.setText(texto.toString());
+   
     
     for (String palabra : azar.palabras) {
         texto.append(palabra).append("\n");
