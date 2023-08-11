@@ -5,7 +5,6 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     
     private String palabras[] = new String[10];
     
-    
     public void inicializarPalabraSecreta(){
         int index = rng.nextInt(0, 10);
         palabraSecreta = palabras[index];
