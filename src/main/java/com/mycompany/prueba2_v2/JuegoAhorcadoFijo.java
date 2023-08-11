@@ -17,14 +17,15 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
 
     @Override
     String actualizarPalabraActual(char letra) {
-        for(int i = 0; i<palabraActual.length()-1; i++){
-            if(palabraActual.charAt(i)==letra){
-                palabraActual = palabraActual.replace(palabraActual.charAt(i), letra);
-                System.out.println(palabraActual);
-            }
-        }   
-        return palabraActual;
-    }
+       StringBuilder nuevaPalabra = new StringBuilder(palabraActual);
+       for (int i = 0; i < palabraSecreta.length(); i++) {
+           if (palabraSecreta.charAt(i) == letra) {
+               nuevaPalabra.setCharAt(i, letra);
+           }
+       }
+       palabraActual = nuevaPalabra.toString();
+       return palabraActual;
+   }
 
     @Override
     boolean verificarLetra(char letra) {
