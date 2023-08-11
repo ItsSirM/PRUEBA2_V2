@@ -1,8 +1,6 @@
 package com.mycompany.prueba2_v2;
 import java.util.Random;
-import java.util.Scanner;
 public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
-    private Scanner scanner = new Scanner(System.in);
     private Random rng = new Random();
     
     private String palabras[] = new String[10];
@@ -49,18 +47,6 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     
     public void jugar(){
         inicializarPalabraSecreta();
-        while (intentos>0){
-            char letra = scanner.next().charAt(0);
-            verificarLetra(letra);
-            if (verificarLetra(letra)==true){
-                if(hasGanado()==true){
-                    System.out.println("Has Ganado");
-                }
-                else
-                    System.out.println("Perdiste Lmao");
-            }
-            else
-                intentos--;
-        }
+        new AZAR_SWING().setVisible(true);
     }
 }
