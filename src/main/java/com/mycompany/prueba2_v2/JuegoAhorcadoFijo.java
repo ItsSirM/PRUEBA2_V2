@@ -1,18 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.prueba2_v2;
 
-/**
- *
- * @author AdminColeexz
- */
 public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
 
     public JuegoAhorcadoFijo(String palabra){
         palabraSecreta = palabra;
         palabraActual = "_".repeat(palabraSecreta.length());
+        intentos = 5;
     }
  
   
@@ -23,21 +16,26 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
     }
 
     @Override
-    void actualizarPalabraActual(char letra) {
+    String actualizarPalabraActual(char letra) {
         for(int i = 0; i<palabraActual.length()-1; i++){
             if(palabraActual.charAt(i)==letra){
-                palabraActual.replace(palabraActual.charAt(i), letra);
+                palabraActual = palabraActual.replace(palabraActual.charAt(i), letra);
+                System.out.println(palabraActual);
             }
-        }
+        }   
+        return palabraActual;
     }
 
     @Override
     boolean verificarLetra(char letra) {
-        for(int i = 0; i<palabraActual.length()-1; i++){
-            if (palabraActual.charAt(i)==letra){
-                return true;
-            }
+        int c=0;
+        for(int i = 0; i<palabraSecreta.length()-1; i++){
+            if (palabraSecreta.charAt(i)==letra)
+                c++;
         }
+        
+        if (c>0)
+            return true;
         return false;
     }
 
@@ -45,5 +43,17 @@ public class JuegoAhorcadoFijo extends JuegoAhorcadoBase {
     public void inicializarPalabraSecreta() {
         
     }
+
+    @Override
+    public void jugar() {
+        inicializarPalabraSecreta();
+        FIJO_AZAR azar = new FIJO_AZAR();
+        azar.setVisible(true);
+        azar.setLocationRelativeTo(null);
+    }
     
+    public void reset(){
+        palabraActual = "_".repeat(palabraSecreta.length());
+    }
+   
 }
