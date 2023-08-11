@@ -8,6 +8,15 @@ package com.mycompany.prueba2_v2;
  *
  * @author MARTI
  */
-public class Prueba {
-    
+public class MAIN {
+    public static void main(String[] args) {
+        
+        Menu PPP= new Menu();
+        
+        PPP.setVisible(true);
+        PPP.setLocationRelativeTo(null);
+        
+        
+        
+    }
 }
