@@ -22,6 +22,7 @@ private String palabrasAlAzar[] = {
         "azar", 
         "proyecto", 
         "tecnologia"
+        
     };
     /**
      * Creates new form SECRETAS_SWING
